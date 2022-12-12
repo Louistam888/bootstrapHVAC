@@ -1,0 +1,10 @@
+@use "variables" as *;
+
+footer {
+  font-size: 1.25rem;
+  font-family: $latoBold;
+  color: $white;
+  background-color: $black;
+  padding: 20px 0; 
+}
+

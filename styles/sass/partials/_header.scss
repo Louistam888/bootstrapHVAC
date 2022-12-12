@@ -1,0 +1,148 @@
+@use "variables" as *;
+ 
+.imageContainer {
+  width: 100%;
+  height: fit-content;
+}
+
+.addressBar1, .addressBar2, .addressBar3 {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+.addressBar1 {
+  font-family: $latoBold;
+  font-size: 1rem;
+}
+
+.addressBar1, .addressBar2 {
+  background-color: $black;
+  color: $white;
+}
+
+.emerg {
+  color: $white;
+  font-family: $latoItalic;
+  text-transform: uppercase;
+  line-height: 1.1rem;
+}
+
+.emerg::before {
+  content: "24/7 ";
+  font-size: 1.3rem;
+}
+
+.addressBar1 {
+  border-radius: 50px 0 0 50px;
+}
+
+.pill {
+  display: flex;   
+  height: 60px;
+  width: 100%;
+}
+
+.blackPart {
+  display: flex;
+  background-color: $black;
+  color: $white;
+  height: 100%;
+  width: 60%;
+  border-radius: 35px 0 0 35px;
+}
+.redPart {
+  display: flex;
+  height: 100%;
+  background-color: $red;
+  width: 40%;
+  border-radius: 0 35px 35px 0px;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.TFS {
+  font-size: 1.4rem;
+  display: inline;
+}
+
+.backgroundImgContainer {
+  height: calc(100vh - 90px);
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+}
+
+.heroText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+
+}
+
+h1 {
+  text-transform: uppercase; 
+  padding: 0 20px;
+  color: $white;
+  font-size: 3.313rem;
+  font-family: $latoBlack;
+}
+
+.mainInfoContainer {
+  margin-top: 50px;
+}
+
+.subInfoContainers {
+  padding: 0 20px;
+  color: $white;
+  height: 100%;
+}
+
+.bannerText {
+  position: relative;
+  font-size: 1.375rem;
+  font-family: $latoBold;
+}
+
+.bannerText::before {
+  content: url(/assets/checkmark.png); 
+  position: absolute;
+  left: -30px;
+}
+
+.intro {
+  position: relative;
+}
+
+.quote {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  bottom: 1px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.mobileDescription {
+  background-color: $blue;
+  border: 5px solid $blue;
+}
+
+
+
+
+
+
+

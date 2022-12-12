@@ -1,0 +1,811 @@
+* {
+  scroll-behavior: smooth;
+  font-family: "Lato-Regular";
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #1E1E1E;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("/fonts/Lato/Lato-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("/fonts/Lato/Lato-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Lato-Black";
+  src: url("/fonts/Lato/Lato-Black.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Lato-Italic";
+  src: url("/fonts/Lato/Lato-Italic.ttf");
+  font-weight: 900;
+}
+.imageContainer {
+  width: 100%;
+  height: fit-content;
+}
+
+.addressBar1, .addressBar2, .addressBar3 {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+.addressBar1 {
+  font-family: "Lato-Bold";
+  font-size: 1rem;
+}
+
+.addressBar1, .addressBar2 {
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+}
+
+.emerg {
+  color: #FFFFFF;
+  font-family: "Lato-Italic";
+  text-transform: uppercase;
+  line-height: 1.1rem;
+}
+
+.emerg::before {
+  content: "24/7 ";
+  font-size: 1.3rem;
+}
+
+.addressBar1 {
+  border-radius: 50px 0 0 50px;
+}
+
+.pill {
+  display: flex;
+  height: 60px;
+  width: 100%;
+}
+
+.blackPart {
+  display: flex;
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+  height: 100%;
+  width: 60%;
+  border-radius: 35px 0 0 35px;
+}
+
+.redPart {
+  display: flex;
+  height: 100%;
+  background-color: #CB020B;
+  width: 40%;
+  border-radius: 0 35px 35px 0px;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.TFS {
+  font-size: 1.4rem;
+  display: inline;
+}
+
+.backgroundImgContainer {
+  height: calc(100vh - 90px);
+}
+.backgroundImgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+h1 {
+  text-transform: uppercase;
+  padding: 0 20px;
+  color: #FFFFFF;
+  font-size: 3.313rem;
+  font-family: "Lato-Black";
+}
+
+.mainInfoContainer {
+  margin-top: 50px;
+}
+
+.subInfoContainers {
+  padding: 0 20px;
+  color: #FFFFFF;
+  height: 100%;
+}
+
+.bannerText {
+  position: relative;
+  font-size: 1.375rem;
+  font-family: "Lato-Bold";
+}
+
+.bannerText::before {
+  content: url(/assets/checkmark.png);
+  position: absolute;
+  left: -30px;
+}
+
+.intro {
+  position: relative;
+}
+
+.quote {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  bottom: 1px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.mobileDescription {
+  background-color: #2F338F;
+  border: 5px solid #2F338F;
+}
+
+header {
+  border-top: 7px solid #2F338F;
+}
+
+.navbar-nav {
+  width: 100%;
+}
+
+.navbar {
+  background-color: #2F338F;
+  margin: 0;
+  z-index: 100;
+}
+
+.nav-link {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin: 0 5px;
+  position: relative;
+}
+
+.dropdown-menu {
+  width: 100%;
+  text-align: center;
+  border: none;
+  background-color: #2F338F;
+}
+
+.dropdown-menu > li > .dropdown-item {
+  font-family: "Lato-Regular";
+  text-transform: capitalize;
+  color: #FFFFFF;
+  font-size: 1.1rem;
+}
+.dropdown-menu > li > .dropdown-item:hover {
+  background-color: #FFFFFF;
+  color: #2F338F;
+}
+.dropdown-menu > li > .dropdown-item:focus {
+  background-color: #FFFFFF;
+  color: #2F338F;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.nav-item a:visited {
+  color: #FFFFFF;
+}
+
+.nav-item:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: #FFFFFF;
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  width: 0;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-item:focus:after {
+  width: 100%;
+  left: 0;
+}
+
+.badge {
+  width: 150px;
+  position: relative;
+}
+
+.verified {
+  position: absolute;
+  top: -12px;
+  left: 0;
+}
+
+.navbar-brand {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.offer {
+  background-color: #CB020B;
+  padding: 50px 0;
+}
+
+.offer1 {
+  font-size: 1.25rem;
+}
+
+.offer2 {
+  font-size: 1.875rem;
+  position: relative;
+}
+
+.offer2::before {
+  content: url(/assets/pricetag.png);
+  position: absolute;
+  left: -50px;
+}
+
+.offer1, .offer2 {
+  font-family: "Lato-Regular";
+  color: #FFFFFF;
+}
+
+.btnAC, .furnace {
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  text-transform: uppercase;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin: 5px 0;
+  transition: transform 0.6s ease-in-out;
+  color: #1E1E1E;
+}
+.btnAC a, .furnace a {
+  color: #1E1E1E;
+  font-size: 1.063rem;
+  padding: 0 60px;
+}
+.btnAC:hover, .furnace:hover {
+  color: #1E1E1E;
+  box-shadow: -1px 1px 2px 5px rgba(47, 51, 143, 0.8);
+}
+.btnAC:hover, .furnace:hover {
+  color: #1E1E1E;
+  box-shadow: -1px 1px 2px 5px rgba(47, 51, 143, 0.8);
+}
+
+.btnAC:active, .furnace:active {
+  animation: push 0.5s ease-in-out;
+}
+
+@keyframes push {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.tempIcon {
+  position: absolute;
+  right: 0;
+  height: 45px;
+  width: auto;
+  padding-right: 5px;
+}
+
+.rim {
+  padding: 50px 0;
+}
+
+.repairIcon {
+  width: 67px;
+  height: auto;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: "Lato-Black";
+  font-size: 2.375rem;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
+
+.blueLine {
+  width: 160px;
+  border-bottom: 3px solid #2F338F;
+}
+
+.bodyText {
+  font-size: 1.25rem;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+.card {
+  padding: 20px 10px;
+  border: 2px solid #1E1E1E;
+  border-radius: 12px;
+  box-shadow: -1px 1px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+  box-shadow: -1px 1px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.card:focus {
+  box-shadow: -1px 1px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-img-top {
+  width: 110px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.card-title {
+  font-family: "Lato-Bold";
+  font-size: 1.563rem;
+  line-height: 1.438rem;
+  text-transform: capitalize;
+  text-align: center;
+  color: #1E1E1E;
+}
+
+.card-text {
+  display: flex;
+  justify-content: center;
+}
+.card-text img {
+  width: 17px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.serviceCard {
+  width: 170px;
+  transition: transform 0.6s ease-in-out;
+}
+
+.serviceCard:active {
+  animation: push 0.5s ease-in-out;
+}
+
+.rimTop > .bodyText {
+  color: #1E1E1E;
+  font-size: 1.25rem;
+}
+
+.repairMan {
+  object-fit: cover;
+  object-position: center;
+  width: 50vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.chooseRelative {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.chooseSection2 {
+  background-color: #2F338F;
+  padding-left: 20px;
+}
+.chooseSection2 h2 {
+  color: #FFFFFF;
+}
+
+.chooseBackground {
+  background-color: #2F338F;
+}
+
+.chooseText {
+  height: 100%;
+}
+
+.learnLink {
+  background-color: #CB020B;
+  width: 95%;
+  border-radius: 30px;
+  margin-top: 20px;
+  transition: transform 0.6s ease-in-out;
+}
+.learnLink:hover {
+  box-shadow: -1px 1px 2px 5px rgba(255, 255, 255, 0.8);
+}
+.learnLink:hover {
+  box-shadow: -1px 1px 2px 5px rgba(255, 255, 255, 0.8);
+}
+
+.learnLink:active {
+  animation: push 0.5s ease-in-out;
+}
+
+.learnText {
+  font-family: "Lato-Black";
+  font-size: 0.938rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 10px;
+}
+
+.learnText::before {
+  content: url(/assets/white-arrow.png);
+}
+
+.awards {
+  padding: 50px 0;
+}
+
+.awardsSection {
+  width: 50%;
+}
+
+.honours {
+  width: auto;
+  max-height: 180px;
+}
+
+.testimonial {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 0.8) 100%), url("/assets/testimonial-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+}
+.testimonial .fa-quote-left {
+  color: #FFFFFF;
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+}
+.testimonial img {
+  height: 100%;
+  width: 100%;
+}
+.testimonial .bodyText {
+  font-family: "Lato-Bold";
+  white-space: pre-line;
+}
+.testimonial .rating {
+  height: 100%;
+}
+
+.readMore {
+  background-color: #CB020B;
+  width: 200px;
+  margin-top: 30px;
+  transition: transform 0.6s ease-in-out;
+}
+.readMore:hover {
+  box-shadow: -1px 1px 2px 5px rgba(255, 255, 255, 0.8);
+}
+.readMore:hover {
+  box-shadow: -1px 1px 2px 5px rgba(255, 255, 255, 0.8);
+}
+
+.readMore:active {
+  animation: push 0.5s ease-in-out;
+}
+
+.readText {
+  width: 100%;
+  height: 100%;
+  color: #FFFFFF;
+  font-family: "Lato-Bold";
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 0;
+}
+
+.readText::after {
+  content: url(/assets/white-arrow.png);
+}
+
+.contact {
+  background-color: #2F338F;
+  padding: 100px 0;
+}
+
+.whiteLogo {
+  width: 350px;
+  height: auto;
+}
+
+footer {
+  font-size: 1.25rem;
+  font-family: "Lato-Bold";
+  color: #FFFFFF;
+  background-color: #1E1E1E;
+  padding: 20px 0;
+}
+
+@media (max-width: 1200px) {
+  .serviceCard {
+    flex: 0 0 25%;
+  }
+}
+@media (max-width: 991px) {
+  .backgroundImgContainer {
+    height: 480px;
+  }
+  .navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #FFFFFF;
+    border-bottom: 5px solid #2F338F;
+  }
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+    height: 120px;
+  }
+  .navbar-toggler {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .navbar-toggler {
+    border: none;
+  }
+  .navbar-toggler:active {
+    box-shadow: none;
+  }
+  .nav-link {
+    color: #1E1E1E;
+  }
+  .nav-item a:visited {
+    color: #1E1E1E;
+  }
+  .navLogo {
+    height: 100px;
+    width: auto;
+    padding-top: 20px;
+  }
+  .dropdown {
+    flex-direction: column;
+  }
+  .dropdown-menu {
+    background-color: #FFFFFF;
+  }
+  .dropdown-item {
+    color: #1E1E1E;
+  }
+  .dropdown-menu > li > .dropdown-item {
+    color: #1E1E1E;
+  }
+  .intro {
+    height: 480px;
+  }
+  .heroText {
+    height: calc(100% - 120px);
+  }
+  .bannerText {
+    margin: 0 auto;
+  }
+  .mainInfoContainer {
+    margin: 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .offer {
+    padding: 25px 0;
+  }
+  .offer1, .offer2 {
+    text-align: center;
+  }
+  .offer2::before {
+    left: -5px;
+  }
+  .bodyText {
+    display: flex;
+    text-align: center;
+  }
+  .repairMan {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .chooseRelative {
+    position: relative;
+    width: 100%;
+  }
+  .chooseSection2 {
+    padding: 50px 0;
+  }
+  .awardsSection {
+    width: 100%;
+  }
+  .learnLink {
+    width: 80%;
+  }
+  .pill {
+    flex-direction: column;
+  }
+  .blackPart {
+    width: 100%;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .addressBar1 {
+    margin: 5px 0;
+  }
+  .redPart {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.9rem;
+  }
+  .bannerText {
+    font-size: 1.2rem;
+  }
+  .offer1 {
+    font-size: 1.2rem;
+  }
+  .offer2 {
+    font-size: 1.5rem;
+    position: relative;
+  }
+  .offer2::before {
+    display: none;
+  }
+  .btnAC > a, .furnace > a {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .card-img-top {
+    width: 80px;
+  }
+  .serviceCard {
+    flex: 0 0 150px;
+  }
+  .rim {
+    padding: 10px 0;
+  }
+  .learnLink {
+    width: 80%;
+  }
+  .honours {
+    max-height: 60px;
+  }
+  .whiteLogo {
+    width: 300px;
+  }
+}
+@media (max-width: 540px) {
+  .mainInfoContainer {
+    margin-top: 25px;
+  }
+  h1 {
+    font-size: 1.9rem;
+  }
+  .bannerText {
+    font-size: 1rem;
+  }
+  .buttonContainer {
+    height: 60px;
+  }
+  .navLogo {
+    height: 55px;
+  }
+  .quote {
+    width: 200px;
+  }
+  .offer1 {
+    font-size: 1.1rem;
+  }
+  .offer2 {
+    font-size: 1.3rem;
+    position: relative;
+  }
+  .card {
+    padding: 10px 0;
+  }
+  .testimonial {
+    height: auto;
+    padding: 30px 0;
+  }
+  .whiteLogo {
+    width: 250px;
+  }
+  .addressBar1, .addressBar2 {
+    font-size: 0.9rem;
+  }
+  .btnAC, .furnace {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 330px) {
+  .card-img-top {
+    width: 50px;
+  }
+  .card-title {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .serviceCard {
+    flex: 0 0 120px;
+  }
+}

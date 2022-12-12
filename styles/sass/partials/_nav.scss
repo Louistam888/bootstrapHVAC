@@ -1,0 +1,100 @@
+@use "variables" as *;
+
+header {
+  border-top: 7px solid $blue;
+}
+
+.navbar-nav {
+  width: 100%;
+}
+
+.navbar {
+  background-color: $blue;
+  margin: 0;
+  z-index: 100;
+}
+
+.nav-link {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin: 0 5px;
+  position: relative;
+}
+
+.dropdown-menu {
+  width: 100%;
+  text-align: center;
+  border: none;
+  background-color: $blue;
+}
+
+.dropdown-menu > li > .dropdown-item{
+  font-family: $lato;
+  text-transform: capitalize;
+  color: $white;
+  font-size: 1.1rem;
+  
+
+  &:hover {
+    background-color: $white;
+    color: $blue;
+  }
+
+  &:focus {
+    background-color: $white;
+    color: $blue;
+  }
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  
+  a:visited {
+    color: $white;
+  }
+}
+
+.nav-item:after {    
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: $white;
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  width: 0;
+}
+
+.nav-item:hover:after { 
+  width: 100%; 
+  left: 0;
+}
+.nav-item:focus:after { 
+  width: 100%; 
+  left: 0;
+}
+
+.badge {
+  width: 150px;
+  position: relative;
+}
+
+.verified {
+  position: absolute; 
+  top: -12px;
+  left: 0;
+}
+
+.navbar-brand {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+

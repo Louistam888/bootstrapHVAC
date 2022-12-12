@@ -1,0 +1,326 @@
+@use "variables" as *;
+
+//OFFER SECTION 
+
+.offer {
+  background-color: $red;
+  padding: 50px 0;
+}
+
+.offer1 {
+  font-size: 1.25rem;
+}
+
+.offer2 {
+  font-size: 1.875rem;
+  position: relative;
+}
+
+.offer2::before {
+  content: url(/assets/pricetag.png); 
+  position: absolute;
+  left: -50px;
+}
+
+.offer1, .offer2 {
+  font-family: $lato;
+  color: $white;
+}
+
+.btnAC, .furnace {
+  background-color: $white;
+  border-radius: 30px;
+  text-transform: uppercase;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin: 5px 0;
+  transition: transform 0.6s ease-in-out;
+  color: $black;
+
+  a {
+    color: $black;
+    font-size: 1.063rem;
+    padding: 0 60px;
+  }
+  
+  &:hover{
+    color: $black;
+    box-shadow: -1px 1px 2px 5px rgba(47,51,143,0.8);
+  }
+
+  &:hover{
+    color: $black;
+    box-shadow: -1px 1px 2px 5px rgba(47,51,143,0.8);
+  }
+}
+
+.btnAC:active, .furnace:active {
+  animation: push 0.5s ease-in-out;
+}
+
+@keyframes push {
+  0% {transform: scale(1);}
+  50% {transform: scale(0.8);}
+  100% {transform: scale(1);}
+}
+
+.tempIcon {
+  position: absolute;
+  right: 0;
+  height: 45px;
+  width: auto;
+  padding-right: 5px;
+}
+
+
+// RIM SECTION
+
+.rim {
+  padding: 50px 0;
+}
+
+.repairIcon {
+  width: 67px;
+  height: auto;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: $latoBlack;
+  font-size: 2.375rem;
+  justify-content: center;
+  display: flex;
+  text-align:center;
+}
+
+.blueLine {
+  width: 160px;
+  border-bottom: 3px solid $blue;
+}
+
+.bodyText {
+  font-size: 1.25rem;
+  justify-content: center;
+  color: $white;
+}
+
+.card {
+  padding: 20px 10px;
+  border: 2px solid $black;
+  border-radius: 12px;
+  box-shadow: -1px 1px 2px 5px rgba(0,0,0,0.1);
+
+  &:hover {
+    box-shadow: -1px 1px 2px 5px rgba(0,0,0,0.5);
+  }
+
+  &:focus {
+    box-shadow: -1px 1px 2px 5px rgba(0,0,0,0.5);
+  }
+}
+
+.card-img-top {
+  width: 110px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.card-title {
+  font-family: $latoBold; 
+  font-size: 1.563rem;
+  line-height: 1.438rem;
+  text-transform: capitalize;
+  text-align: center;
+  color: $black;
+}
+
+.card-text {
+  display: flex;
+  justify-content: center;
+  
+  img {
+    width: 17px; 
+    height: auto;
+    margin-top: 10px;
+  }
+}
+
+.serviceCard {
+  width: 170px;
+  transition: transform 0.6s ease-in-out;
+}
+
+.serviceCard:active {
+  animation: push 0.5s ease-in-out;
+}
+
+.rimTop > .bodyText {
+  color: $black;
+  font-size: 1.25rem;
+}
+
+
+//WHYCHOOSE SECTION 
+
+.repairMan {
+  object-fit: cover;
+  object-position: center;
+  width: 50vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.chooseRelative {
+  position: relative; 
+  width: 100%;
+  height: 400px;
+}
+ 
+.chooseSection2 {
+  background-color: $blue;
+  padding-left: 20px;
+ 
+  h2 {
+    color: $white;
+  }
+}
+
+.chooseBackground {
+  background-color: $blue;
+}
+
+.chooseText {
+  height: 100%;
+}
+
+.learnLink {
+  background-color: $red;
+  width: 95%;
+  border-radius: 30px;
+  margin-top: 20px;
+  transition: transform 0.6s ease-in-out;
+
+  &:hover{
+    box-shadow: -1px 1px 2px 5px rgba(255,255,255,0.8);
+  }
+
+  &:hover{
+    box-shadow: -1px 1px 2px 5px rgba(255,255,255,0.8);
+  }
+}
+
+.learnLink:active {
+  animation: push 0.5s ease-in-out;
+}
+
+
+.learnText {
+  font-family: $latoBlack;
+  font-size: 0.938rem;
+  text-transform: uppercase;
+  color: $white;
+  padding: 10px;
+}
+
+.learnText::before {
+  content: url(/assets/white-arrow.png)
+}
+
+
+//AWARDS SECTION 
+
+.awards {
+  padding: 50px 0;
+}
+
+.awardsSection {
+  width: 50%;
+}
+
+.honours {
+  width: auto;
+  max-height: 180px;
+}
+
+//TESTIMONIAL 
+
+.testimonial {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 0.8) 100%), url("/assets/testimonial-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+
+  .fa-quote-left {
+    color: $white;
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .bodyText {
+    font-family: $latoBold;
+    white-space: pre-line;
+  }
+
+  .rating {
+    height: 100%;
+  }
+}
+
+.readMore {
+  background-color: $red;
+  width: 200px;
+  margin-top: 30px;
+  transition: transform 0.6s ease-in-out;
+
+  &:hover{
+    box-shadow: -1px 1px 2px 5px rgba(255,255,255,0.8);
+  }
+
+  &:hover{
+    box-shadow: -1px 1px 2px 5px rgba(255,255,255,0.8);
+  }
+}
+
+.readMore:active {
+  animation: push 0.5s ease-in-out;
+}
+
+.readText {
+  width: 100%;
+  height: 100%;
+  color: $white;
+  font-family: $latoBold;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 0;
+}
+
+.readText::after {
+  content: url(/assets/white-arrow.png)
+}
+
+
+//CONTACT SECTION
+
+.contact {
+  background-color: $blue;
+  padding: 100px 0;
+}
+
+.whiteLogo {
+  width: 350px;
+  height: auto;
+}
